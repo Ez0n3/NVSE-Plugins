@@ -9,7 +9,7 @@
 IDebugLog		gLog("nvse_plugin_example_ng.log");
 #else
 IDebugLog		gLog("nvse_plugin_example.log");
-#endif
+#endif // NOGORE
 
 PluginHandle	g_pluginHandle = kPluginHandle_Invalid;
 
@@ -77,7 +77,7 @@ bool Cmd_ExamplePlugin_PluginTest_Execute(COMMAND_ARGS)
 	return true;
 }
 
-#endif
+#endif // RUNTIME
 
 DEFINE_COMMAND_PLUGIN(ExamplePlugin_PluginTest, "prints a string", 0, 0, NULL)
 
@@ -119,7 +119,7 @@ bool NVSEPlugin_Query(const NVSEInterface * nvse, PluginInfo * info)
 			_ERROR("incorrect runtime edition (got %08X need %08X (standard))", nvse->isNogore, 0);
 			return false;
 		}
-#endif
+#endif // NOGORE
 	}
 	else
 	{
@@ -131,7 +131,7 @@ bool NVSEPlugin_Query(const NVSEInterface * nvse, PluginInfo * info)
 #ifdef NOGORE
 		_ERROR("Editor only uses standard edition, closing.");
 		return false;
-#endif
+#endif // NOGORE
 	}
 
 	// version checks pass
