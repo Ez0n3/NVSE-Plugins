@@ -1,5 +1,4 @@
 #pragma once
-#include <string> // Added for VS2020
 
 class Script;
 class TESForm;

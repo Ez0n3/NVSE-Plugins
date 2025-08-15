@@ -197,7 +197,13 @@ TESObjectREFR* TESObjectREFR::Create(bool bTemp)
 	TESObjectREFR* refr = (TESObjectREFR*)FormHeap_Allocate(sizeof(TESObjectREFR));
 	ThisStdCall(s_TESObject_REFR_init, refr);
 	if (bTemp)
-		CALL_MEMBER_FN(refr, MarkAsTemporary);
+		
+		// this errors in VS2020
+		// CALL_MEMBER_FN(refr, MarkAsTemporary);
+		
+		// changing to match GameScript.cpp which doesn't error
+		CALL_MEMBER_FN(refr, MarkAsTemporary)();
+		
 	return refr;
 }
 
