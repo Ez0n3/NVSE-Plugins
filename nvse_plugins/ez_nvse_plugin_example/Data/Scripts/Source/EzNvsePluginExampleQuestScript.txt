@@ -1,0 +1,45 @@
+ScriptName EzNvsePluginExampleQuestScript
+
+; EzNvsePluginExampleQuest.Started == 0
+short bInit = 0 ; reset every time the game loads
+
+Begin GameMode
+
+    ; Check if the quest has started (and only run once)
+	; EzNvsePluginExampleQuest.Started == 0
+    if bInit == 0
+		
+		PrintC "EzNvsePluginExampleQuest : Begin GameMode"
+		; MessageBoxEx "Begin GameMode|OK|Cancel" ; NOT FOUND
+		
+		
+		if (PluginExampleFunctionsTest)
+			PrintC "PluginExampleFunctionsTest : Test()"
+			; MessageBoxEx "Begin GameMode|OK|Cancel" ; NOT FOUND
+		endif
+		
+		
+        ; Mark the quest as started to prevent re-execution
+        ; set EzNvsePluginExampleQuest.Started to 1
+		set bInit to 1
+
+		PrintC "EzNvsePluginExampleQuest : End GameMode"
+		; MessageBoxEx "End GameMode|OK|Cancel" ; NOT FOUND
+		
+    endif
+
+End
+
+
+====================================================
+====================================================
+
+
+ScriptName EzNvsePluginExampleQuestScript
+
+Begin GameMode
+
+	PrintC "EzNvsePluginExampleQuest : Begin GameMode"
+	PrintC "EzNvsePluginExampleQuest : End GameMode"
+
+End
