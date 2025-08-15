@@ -10,18 +10,20 @@
   
 Updated: **August 15, 2025**  
   
+This repo contains Plugins for Fallout New Vegas - NVSE, including a Plugin Example (**Status: Tested and Working**).  
+  
 **NVSE** is an SDK created by [Ian Patterson](https://github.com/ianpatt), which extends the functionality of **Fallout New Vegas** for mod authors.  
 The original SDK used for building the NVSE EXE can be found here: [NVSE](http://nvse.silverlock.org/) [NVSE Repo](https://github.com/ianpatt/nvse)  
 Using NVSE in your mod will then make NVSE a **Dependency** which you must must inform your users of and provide a link to.  
   
-This repo contains Plugins for Fallout New Vegas - NVSE, including a Plugin Example (**Status: Tested and Working**).  
-  
-This mirror of the SDK is currently set to support Fallout New Vegas runtime: **1.4.0.525 (0x040020D0)** - NVSE build: **0.5.1.4**, other versions will need to be manually configured.  
+This mirror of the SDK is currently set to support Fallout New Vegas runtime version: **1.4.0.525** - NVSE version: **0.5.1.4**, other versions will need to be manually configured.  
 It has also been pre-configured to build **Plugins** and is not intended for building the full EXE (Core and Loader).  
   
 All necessary projects have been migrated to and built with **Visual Studio 2022 (v143)**, which can be downloaded here: [Visual Studio 2020](https://visualstudio.microsoft.com/downloads/)   
 
-
+  
+[Back to top](#nvse-plugins)  
+  
 ## Construction:  
   
 To build plugins, open "NVSE-Plugins/nvse_plugins" and then open the plugin folder you want to build. EG: **ez_nvse_plugin_example**.  
@@ -50,7 +52,9 @@ Post compile options have been removed for all projects, but can be re-added in-
 > Because the Ez plugin example registers new functions, it requires an OpcodeBase variable that **must be** requested from the NVSE team **before releasing to the public**!  
 > The default OpcodeBase that this example plugins uses (**0x2000**) will conflict will all other plugins that use the same OpcodeBase!  
 > If you need functions that require the OpcodeBase variable, then request a new OpcodeBase range from the NVSE team.  
-
+  
+[Back to top](#nvse-plugins)  
+  
 ## Integration:  
   
 Integrating the example plugin with Fallout New Vegas involves creating a new Plugin Script which interfaces with the plugin dll.  
@@ -81,7 +85,9 @@ Begin GameMode
 End  
 ```
  * Save the script.
-
+  
+[Back to top](#nvse-plugins)  
+  
 ## Duplication:  
   
 Duplicating the plugin example to make your own plugin is quite easy if you follow these steps:  
@@ -112,7 +118,7 @@ System.Guid.NewGuid().ToString().ToUpper()
  * Replace "ProjectGuid" with the GUID you generated above, this must be unique to the project.  
  * Replace "ProjectName" and "RootNamespace" to your new plugins "short" name. EG:  
 ```
-    <ProjectGuid>{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}</ProjectGuid>  
+    <ProjectGuid>{11111111-2222-3333-4444-555555555555}</ProjectGuid>  
     <ProjectName>my_cool_new_plugin</ProjectName>  
     <RootNamespace>my_cool_new_plugin</RootNamespace>  
 ```
@@ -137,9 +143,12 @@ Select your new "my_cool_new_plugin.vcxproj" or "my_cool_new_plugin_lean.vcxproj
 Select a Configuration (Debug or Release) and then Build the solution to test it.  
 After completion, open the ./Builds/Configuration/ folder and there should be your new dll file. EG: **my_cool_new_plugin.dll**  
   
+[Back to top](#nvse-plugins)  
+  
 ## Donation:  
   
 If you enjoy and/or find this content useful, consider [buying me a coffee!](https://www.paypal.com/donate/?hosted_button_id=757K44LRCMVRW) :coffee:  
   
+[Back to top](#nvse-plugins)
 
 
