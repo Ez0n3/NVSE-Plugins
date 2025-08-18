@@ -8,18 +8,20 @@
   
 ## Description:  
   
-Updated: **August 15, 2025**  
+Updated: **August 18, 2025**  
   
 This repo contains Plugins for Fallout New Vegas - NVSE, including a Plugin Example (**Status: Tested and Working**).  
   
-**NVSE** is an SDK created by [Ian Patterson](https://github.com/ianpatt), which extends the functionality of **Fallout New Vegas** for mod authors.  
-The original SDK used for building the NVSE EXE can be found here: [NVSE](http://nvse.silverlock.org/) [NVSE Repo](https://github.com/ianpatt/nvse)  
-Using NVSE in your mod will then make NVSE a **Dependency** which you must must inform your users of and provide a link to.  
+ * **NVSE** is an SDK created by [Ian Patterson](https://github.com/ianpatt), which extends the functionality of **Fallout New Vegas** for mod authors.  
+ * The original SDK used for building the NVSE EXE can be found here: [NVSE](http://nvse.silverlock.org/) [NVSE Repo](https://github.com/ianpatt/nvse)  
+ * Using NVSE in your mod will then make NVSE a **Dependency** which you must must inform your users of and provide a link to ([NVSE](https://www.nexusmods.com/newvegas/mods/67883)).  
   
 This mirror of the SDK is currently set to support Fallout New Vegas runtime version: **1.4.0.525** - NVSE version: **0.5.1.4**, other versions will need to be manually configured.  
 It has also been pre-configured to build **Plugins** and is not intended for building the full EXE (Core and Loader).  
   
-All necessary projects have been migrated to and built with **Visual Studio 2022 (v143)**, which can be downloaded here: [Visual Studio 2020](https://visualstudio.microsoft.com/downloads/)   
+All necessary projects have been migrated to and built with **Visual Studio 2022 (v143)**, which can be downloaded here: [Visual Studio 2020](https://visualstudio.microsoft.com/downloads/)  
+  
+The highest version of VS officially supported before it was abandoned for CMake, is Visual Studio 2019 (v142). Building Plugins with v143 is **experimental**, but functioning.  
 
   
 > [!TIP]  
