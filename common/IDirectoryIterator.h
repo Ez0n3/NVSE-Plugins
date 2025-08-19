@@ -1,5 +1,5 @@
 #pragma once
-#include <string> // Added for VS2020
+#include <string> // Added for VS2022
 
 class IDirectoryIterator
 {

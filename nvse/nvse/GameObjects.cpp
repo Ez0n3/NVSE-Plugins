@@ -198,7 +198,7 @@ TESObjectREFR* TESObjectREFR::Create(bool bTemp)
 	ThisStdCall(s_TESObject_REFR_init, refr);
 	if (bTemp)
 		
-		// this errors in VS2020
+		// this errors in VS2022
 		// CALL_MEMBER_FN(refr, MarkAsTemporary);
 		
 		// changing to match GameScript.cpp which doesn't error
